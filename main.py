@@ -11,9 +11,9 @@ def inputProcessorAOC(cookieValue,day=(datetime.now()).strftime("%d"),year=(date
     cookies = {"session":cookieValue}
     resp = requests.get(url,cookies=cookies)
     if resp.status_code == 200:
-        print("CONNECTED to", url)
+        # print("CONNECTED to", url)
         soup = BeautifulSoup(resp.text, 'html.parser')
     else:
-        print("ERROR GATHERING URL")
+        # print("ERROR GATHERING URL")
         exit()
     return soup
